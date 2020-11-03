@@ -22,7 +22,7 @@
             echo $_SESSION["paraula"] . "<br>";
 
             $_SESSION["lletres_p"][]=$lletra;
-            if(strpos($_SESSION["paraula"],$lletra) !== False){
+            if(strpos($_SESSION["paraula"],$lletra) !== False){ // Miro si conté la lletra
                 echo "trobada" . "<br>";
                 for ($i=0; $i < strlen($_SESSION["paraula"]) ; $i++) {
                     if($_SESSION["array_par"][$i] == $lletra){
@@ -30,7 +30,7 @@
                     }
                 }
             }
-            else{
+            else{ // No conté la lletra
                 echo "has fallat" . "<br>";
                 $_SESSION["intents"] = $_SESSION["intents"] - 1;
             }
